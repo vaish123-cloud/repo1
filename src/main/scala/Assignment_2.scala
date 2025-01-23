@@ -228,5 +228,5 @@ object Assignment_2 {
 //else{
 //  print(s"$number is not perfect sqaure")
 //}
-//  }
-//}
+ }
+}
