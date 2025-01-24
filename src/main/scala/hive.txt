@@ -1,0 +1,165 @@
+Hive:
+insert tables
+partition and bucketing
+optimization
+file formats
+
+Hive is a datawarehouse , it s like sql also called as hiveql that is hive query lanuage=- hql
+
+In hive we have two types of table:
+
+Internal/managed table
+
+External table
+
+Create external table tab1
+
+hive
+create database db11;
+use database db11;
+create table tab1(id int, name string , age int);  --- internal table
+insert into tab1 values(1,"vaish",25),(2,"jassi",22);
+Desc formatted tab1;
+
+mysql
+mysql -u root -p
+Use metastore;
+Select * from column_v2   (schema of tables)
+Select * from tbls   (type and table name)
+
+
+Hadoop
+hadoop fs -ls /user/hive/warehouse/db11.db/tab1
+hadoop fs -cat /user/hive/warehouse/db11.db/tab1/000000_0 (table data)
+
+
+Hive 
+Drop table tab1
+
+
+
+
+sqoop import \
+--connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+--username root \
+--password cloudera \
+ --table vaishali \
+--split-by id \
+--target-dir /user/cloudera/vaish11
+
+Inserting data from local :
+
+1. load local data inpath  (load data from local to hive table)
+
+Create file nov11 in cloudera
+Gedit nov11;
+
+hive
+create  table tab5(cust_id int, cust_name string,cust_age int) row format delimited fields terminated by ",";
+
+ load data local inpath "/home/cloudera/Desktop/nov11" into table tab4;
+
+2.load data inpath (load data from hdfs to hive table)
+
+Move data from mysql to hdfs
+
+sqoop import \
+> --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+> --username root \
+> --password cloudera \
+>  --table vaishali \
+> --split-by id \
+> --target-dir /user/cloudera/vaish11
+
+Hive:  load data inpath "/user/cloudera/vaish11" into table tab6;
+
+customer_id,customer_fname,customer_lname"
+
+sqoop import \
+ --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+ --username root \
+ --password cloudera \
+ --table customers \
+ --columns "customer_id,customer_fname,customer_lname" \
+ --target-dir /user/cloudera/newtab
+
+Assignment :
+1,. Import customer table from mysql to hdfs:sqoop
+
+
+[cloudera@quickstart ~]$ sqoop import \
+> --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+> --username root \
+> --password cloudera \
+> --table customers \
+> --columns "customer_id,customer_fname,customer_lname" \
+> --target-dir /user/cloudera/nov18
+
+2.create table name oct1 in hive with only column name:
+Create table oct1(customer_id int ,customer_fname string ,customer_lname string)row format delimited fields terminated by "," ;
+
+3.load data from hdfs to hive:
+load data inpath "/user/cloudera/nov18" into table oct1;
+
+Partition:
+
+
+Static partition:
+Normal partition insert
+create table customers(id int,name string) partitioned by (state string);
+Insert into customers partition(state="mh") values(1,"A"),(2,"B")
+Insert into customers partition(state="tn") values(3,"c"),(4,"d")
+
+
+in hdfs location
+
+Hadoop fs -ls /user/hive/warehouse/db11.db/customers
+create table customers(id int,name string) partitioned by (state,string);
+
+
+Load partition insert:
+gedit vaish 11
+
+create table info(id int,name string) partitioned by (state string) row format delimited fields terminated by ",";
+
+ load data local inpath "/home/cloudera/Desktop/vaish1" into table info partition(state="mh");
+select * from info;
+
+to check data in hdfs
+
+
+[cloudera@quickstart ~]$ cd Desktop
+[cloudera@quickstart Desktop]$ cat vaish1
+
+
+Table to table insertion:
+
+
+Dynamic partition:
+set hive.exe.dynamic.partion
+
+create table customers(id int,name string) partitioned by (state string);
+Insert into customers partition(state) values(1,"A","tn"),(2,"B","mh")
+
+Show partitions customers;
+
+load satetement doesnot works in dynamic partition
+
+Table to table insertion
+
+Create
+
+
+bcketing:
+
+load are not working in bucketing
+
+
+
+Create external table tab1(customer_id int ,customer_fname string ,customer_lname string)row format delimited fields terminated by "," ;
+
+load data inpath "/user/cloudera/newtab" into table tab1;
+
+hive>  SELECT customer_fname FROM tab1 WHERE customer_fname LIKE 'S%' limit 5 ; 
+
+-*

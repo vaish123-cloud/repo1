@@ -1,0 +1,75 @@
+sqoop import \
+--connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+--username root \
+--password cloudera \
+--table table1 \
+--m 1 \
+--target-dir /user/cloudera/newdoc1
+
+sqoop import \
+--connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+--username root \
+--password cloudera \
+--table categories \
+--target-dir /user/cloudera/vaish
+
+sqoop import \
+--connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+--username root \
+--password cloudera \
+--table customers \
+--columns "customer_id,customer_fname,customer_lname" \
+--target-dir /user/cloudera/vaish1
+
+sqoop import \
+--connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+--username root \
+--password cloudera \
+--table customers \
+--columns "customer_id,customer_fname,customer_lname" \
+--target-dir /user/cloudera/nov18
+
+sqoop import \
+--connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+--username root \
+--password cloudera \
+--table table1 \
+-columns "id" \
+-split-by id \
+--target-dir /user/cloudera/newdoc2
+
+Ans:1
+
+[cloudera@quickstart ~]$ sqoop import \
+> --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+> --username root \
+> --password cloudera \
+> --table table1 \
+> --m 1 \
+> --target-dir /user/cloudera/newdoc1
+
+
+
+
+
+Ans-2
+
+[cloudera@quickstart ~]$ sqoop import \
+> --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+> --username root \
+> --password cloudera \
+> --table table1 \
+> -columns "id" \
+> -split-by id \
+> --target-dir /user/cloudera/newdoc2
+
+Import all and exclude tables:
+
+sqoop import-all-tables \
+--connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+--username root \
+ --password cloudera \
+--exclude-tables sumit , table1 \
+--warehouse-dir /user/cloudera/alldoc99
+
+

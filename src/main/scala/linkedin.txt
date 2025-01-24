@@ -1,0 +1,1032 @@
+2. Employee Promotion Analysis Based on Performance and Experience
+Table Script:
+CREATE TABLE EmployeeDetails (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Department VARCHAR(50),
+    PerformanceRating CHAR(1), -- A, B, C
+    YearsOfExperience INT,
+    LastPromotionDate DATE
+);
+Scenario:
+Evaluate promotion eligibility based on performance ratings and years of experience. The promotion criteria are as follows:
+•	'A': Eligible for promotion if they have more than 5 years of experience.
+•	'B': Eligible if they have more than 3 years of experience; otherwise, they are 'Under Consideration'.
+•	'C': Automatically classified as 'Not Eligible'.
+Question: Write a SQL query to categorize employees by promotion eligibility, group them by department, and calculate the count for each category of eligibility
+
+select Department,
+case 
+when TrainingStatus = "Y" and QuotaAchieved = "1.2"  then "High Performer"
+when TrainingStatus = "Y" and QuotaAchieved> "0.1" and QuotaAchieved< "1.2"  then "Moderate Performer"
+when TrainingStatus = "N" and QuotaAchieved =<"0.1"  then "Low Performer"
+end as performer
+Count(EmployeeID) as totalemployees
+Avg(QuotaAchieved) as averagequota
+Group by Department, Performer
+from 
+Employee;
+
+3. Sales Performance Analysis Based on Training and Quota Achievement
+Table Script:
+CREATE TABLE SalesEmployees (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Department VARCHAR(50),
+    TrainingStatus CHAR(1), -- Y or N
+    QuotaAchieved DECIMAL(10, 2),
+    QuotaTarget DECIMAL(10, 2)
+);
+
+
+
+Scenario:
+Analyze the sales performance of employees based on their training status and quota achievements. The classification is as follows:
+•	If trained and achieved more than 120% of the quota, classify as 'High Performer'.
+•	If trained but achieved between 100%-120%, classify as 'Moderate Performer'.
+•	If not trained and achieved below 100%, classify as 'Low Performer'.
+Question: Construct an SQL query to calculate the total number of employees in each performance category, grouping results by department, and also calculate the average quota achievement for each group.
+
+
+select Department,
+case 
+when BenefitsLevel= "Gold" and PerformanceRating = "A"  then "Very Satisfied"
+when BenefitsLevel= "Silver" and PerformanceRating = "B"  then " Satisfied"
+when BenefitsLevel= "Bronze" and PerformanceRating = "C"  then " Dissatisfied"
+end as satisfaction
+Count(EmployeeID) as totalemployees
+Avg(satisfactionScore) as averagesatisfactionscore
+Group by Department,satisfaction
+from 
+EmployeeSatisfaction;
+
+Table Script:
+CREATE TABLE EmployeeSatisfaction (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Department VARCHAR(50),
+    PerformanceRating CHAR(1), -- A, B, C
+    BenefitsLevel VARCHAR(50), -- Gold, Silver, Bronze
+    SatisfactionScore INT
+);
+
+Scenario:
+Evaluate employee satisfaction based on the level of benefits received and performance ratings. Classify satisfaction as follows:
+•	'Gold' benefits with an 'A' rating = 'Very Satisfied'.
+•	'Silver' benefits with a 'B' rating = 'Satisfied'.
+•	'Bronze' benefits with a 'C' rating = 'Dissatisfied'.
+Question: Write an SQL query to categorize employees into satisfaction levels, group by department, and calculate the average satisfaction score for each satisfaction level.
+
+
+6. Project Performance Evaluation Based on Team Composition and Ratings
+Table Script:
+CREATE TABLE ProjectTeams (
+    ProjectID INT PRIMARY KEY,
+    TeamLeadID INT,
+    TeamMemberID INT,
+    PerformanceRating CHAR(1), -- A, B, C
+    TeamCollaborationScore DECIMAL(5, 2)
+);
+Scenario:
+Evaluate project success based on team performance ratings and collaboration scores. Classify project performance as follows:
+•	Projects with   team rated 'A' and a collaboration score above 80 are 'Highly Successful'.
+•	Projects with team rated 'B' and a collaboration score between 60-80 are 'Moderately Successful'.
+•	All others are classified as 'Unsuccessful'.
+Question: Write an SQL query to categorize projects based on performance, group results by team lead, and calculate the total number of projects in each performance category
+
+
+
+INSERT INTO ProjectTeams (ProjectID, TeamLeadID, TeamMemberID, PerformanceRating, TeamCollaborationScore) VALUES
+(1, 101, 201, 'A', 85.00),
+(1, 101, 202, 'A', 90.00),
+(1, 101, 203, 'B', 88.00),
+(2, 102, 204, 'B', 75.00),
+(2, 102, 205, 'B', 70.00),
+(2, 102, 206, 'C', 65.00),
+(3, 103, 207, 'A', 82.00),
+(3, 103, 208, 'A', 80.00),
+(3, 103, 209, 'A', 88.00),
+(4, 104, 210, 'C', 50.00),
+(4, 104, 211, 'C', 60.00);
+
+
+select TeamLeadID,
+case 
+when TeamCollaborationScore=>"80" and PerformanceRating = "A"  then "Highly Successful"
+when  TeamCollaborationScore>"60" and TeamCollaborationScore<"80" and PerformanceRating = "B"  then "Moderately Successful"
+Else "Unsuccessful"
+end as teamperformance
+Count(*) as Totalprojects
+from 
+ProjectsTeams ,
+
+Group by  TeamLeadID,teamperformance;
+
+#DAY41
+𝐏𝐨𝐥𝐥 𝐨𝐟 𝐭𝐡𝐞 𝐝𝐚𝐲 !! 🙇
+.
+.
+.
+.
+.
+.
+.
+.
+.
+#bigdata #bigdataengineer #dataengineer #hadoop #hive #spark #scala #pythonprogramming #apachehive #optimization #sparksql #sparksfoundation #apachespark #onestepanalytics #pyspark #distributedcomputing #learningandgrowing #problemsolving
+#awscloud #aws #sql #python #DataProcessing #Analytics #DataManagement
+
+𝐖𝐚𝐥𝐦𝐚𝐫𝐭 𝟐𝟎𝟐𝟒 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬: 𝐌𝐲𝐒𝐐𝐋 𝐈𝐧𝐬𝐢𝐠𝐡𝐭 !
+
+
+=================================================================
+.
+.
+.
+.
+.
+.
+.
+.
+.
+ 
+Hey Data Engineers! 
+If you're preparing for interviews with top companies like Walmart, you're likely to encounter a mix of challenging technical questions. Here's a sneak peek into some recently asked  MySQL questions that can give you an edge in your preparation for 2024!
+ 
+1.Window Functions in MySQL:
+ 
+✔️ How do you use LAG() and LEAD() window functions in MySQL?
+ Bonus: How would you use them to compare each employee’s salary with  the previous and next employee, within the same department, ordered by     hire date?
+ 
+2.Optimizing Complex Queries:
+ 
+✔️ Imagine a huge dataset. What strategies would you use to optimize a    slow JOIN operation in MySQL?
+ Hint: Think about indexing, query execution plans, and partitioning.
+ 
+3.Transactions and Locking:
+ 
+✔️Explain the difference between REPEATABLE READ and SERIALIZABLE   isolation levels in MySQL. When would you use each?
+ Bonus: How does deadlock affect MySQL, and how would you resolve it?
+ 
+ 
+#SQL #InterviewPrep #CareerGrowth #DataEngineering #CloudComputing
+ 
+#Its_all_about_bigdata #bigdata #bigdataengineer #dataengineer #hadoop #hive #spark #scala #pythonprogramming #apachehive #optimization #sparksql #sparksfoundation #apachespark #onestepanalytics #pyspark #distributedcomputing #learningandgrowing #problemsolving #awscloud #aws #sql #python #DataProcessing #Analytics #DataManagement #TransactionalProcessing #AnalyticalProcessing #BusinessIntelligence #DataDrivenDecisions
+
+#Its_all_about_bigdata
+#bigdata
+#bigdataengineer
+#dataengineer
+#hadoop
+#hive
+#spark
+#scala
+#pythonprogramming
+#apachehive
+#optimization
+#sparksql
+#sparksfoundation
+#apachespark
+#onestepanalytics
+#pyspark
+#distributedcomputing
+#learningandgrowing
+#problemsolving
+#awscloud
+#aws
+#sql
+#python
+#DataProcessing
+#Analytics
+#DataManagement
+#TransactionalProcessing
+#AnalyticalProcessing
+#BusinessIntelligence
+#DataDrivenDecisions
+
+#bigdata #bigdataengineer #dataengineer #hadoop #hive #spark #scala #pythonprogramming #apachehive #optimization #sparksql #sparksfoundation #apachespark #onestepanalytics #pyspark #distributedcomputing #learningandgrowing #problemsolving #awscloud #aws #sql #python #DataProcessing #Analytics #DataManagement #TransactionalProcessing #AnalyticalProcessing #BusinessIntelligence #DataDrivenDecisions
+
+#bigdata #bigdataengineer #dataengineer #hadoop #hive #spark #scala #pythonprogramming #apachehive #optimization #sparksql #sparksfoundation #apachespark #onestepanalytics #pyspark #distributedcomputing #learningandgrowing #problemsolving
+#awscloud #aws #sql #python #DataProcessing #Analytics #DataManagement
+
+From <https://www.linkedin.com/in/vaishali-sahu1/overlay/create-post/> 
+
+𝐒𝐐𝐋 | 𝐍𝐮𝐦𝐞𝐫𝐢𝐜 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬 📚📄🖋
+=================
+Numeric Functions are used to perform operations on numbers and return numbers. Following are the numeric functions defined in SQL:
+
+1. ABS(): It returns the absolute value of a number.
+
+Syntax: SELECT ABS(-243.5);
+
+Output: 243.5
+
+SQL> SELECT ABS(-10);
++--------------------------------------+
+| ABS(10) 
++--------------------------------------+
+| 10 
++--------------------------------------+
+
+2. ACOS(): It returns the cosine of a number, in radians.
+
+Syntax: SELECT ACOS(0.25);
+
+Output: 1.318116071652818
+
+3. ASIN(): It returns the arc sine of a number, in radians.
+
+Syntax: SELECT ASIN(0.25);
+
+Output: 0.25268025514207865
+
+4. ATAN(): It returns the arc tangent of a number, in radians.
+
+Syntax: SELECT ATAN(2.5);
+
+Output: 1.1902899496825317
+
+5. CEIL(): It returns the smallest integer value that is greater than or equal to a number.
+
+Syntax: SELECT CEIL(25.75);
+
+Output: 26
+
+6. CEILING(): It returns the smallest integer value that is greater than or equal to a number.
+
+Syntax: SELECT CEILING(25.75);
+
+Output: 26
+
+7. COS(): It returns the cosine of a number, in radians.
+
+Syntax: SELECT COS(30);
+
+Output: 0.15425144988758405
+
+8. COT(): It returns the cotangent of a number, in radians.
+
+Syntax: SELECT COT(6);
+
+Output: -3.436353004180128
+
+9. DEGREES(): It converts a radian value into degrees.
+
+Syntax: SELECT DEGREES(1.5);
+
+Output: 85.94366926962348
+
+SQL>SELECT DEGREES(PI());
++------------------------------------------+
+| DEGREES(PI()) 
++------------------------------------------+
+| 180.000000 
++------------------------------------------+
+
+10. DIV(): It is used for integer division.
+
+Syntax: SELECT 10 DIV 5;
+
+Output: 2
+
+11. EXP(): It returns e raised to the power of a number.
+
+Syntax: SELECT EXP(1);
+
+Output: 2.718281828459045
+
+12. FLOOR(): It returns the largest integer value that is less than or equal to a number.
+
+Syntax: SELECT FLOOR(25.75);
+
+Output: 25
+
+13. GREATEST(): It returns the greatest value in a list of expressions.
+
+Syntax: SELECT GREATEST(30, 2, 36, 81, 125);
+
+Output: 125
+
+14. LEAST(): It returns the smallest value in a list of expressions.
+
+Syntax: SELECT LEAST(30, 2, 36, 81, 125);
+
+Output: 2
+
+𝐒𝐐𝐋 | 𝐍𝐮𝐦𝐞𝐫𝐢𝐜 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬 - 𝐏𝐚𝐫𝐭 𝟐 📚📄🖋
+=======================
+Following are some more numeric functions defined in SQL:
+
+15. LN(): It returns the natural logarithm of a number.
+
+Syntax: SELECT LN(2);
+
+Output: 0.6931471805599453
+
+16. LOG10(): It returns the base-10 logarithm of a number.
+
+Syntax: SELECT LOG(2);
+
+Output: 0.6931471805599453
+
+17. LOG2(): It returns the base-2 logarithm of a number.
+
+Syntax: SELECT LOG2(6);
+
+Output: 2.584962500721156
+
+18. MOD(): It returns the remainder (aka. modulus) of n divided by m.
+
+Syntax: SELECT MOD(18, 4);
+
+Output: 2
+
+19. PI(): It returns the value of Pi and displays 6 decimal places.
+
+Syntax: SELECT PI();
+
+Output: 3.141593
+
+20. POWER(m, n): It returns m raised to the nth power.
+
+Syntax: SELECT POWER(4, 2);
+
+Output: 16
+
+21. RADIANS(): It converts a value in degrees to radians.
+
+Syntax: SELECT RADIANS(180);
+
+Output: 3.141592653589793
+
+22. RAND(): It returns a random number between 0 (inclusive) and 1 (exclusive).
+
+Syntax: SELECT RAND();
+
+Output: 0.33623238684258644
+
+23. ROUND(): It returns a number rounded to a certain number of decimal places.
+
+Syntax: SELECT ROUND(5.553);
+
+Output: 6
+
+24. SIGN(): It returns a value indicating the sign of a number. A return value of 1 means positive; 0 means negative.
+
+Syntax: SELECT SIGN(255.5);
+
+Output: 1
+
+25. SIN(): It returns the sine of a number in radians.
+
+Syntax: SELECT SIN(2);
+
+Output: 0.9092974268256817
+
+26. SQRT(): It returns the square root of a number.
+
+Syntax: SELECT SQRT(25);
+
+Output: 5
+
+
+27. TAN(): It returns the tangent of a number in radians.
+
+Syntax: SELECT TAN(1.75);
+
+Output: -5.52037992250933
+
+28. ATAN2(): It returns the arctangent of the x and y coordinates, as an angle and expressed in radians.
+
+Syntax: SELECT ATAN2(7);
+
+Output: 1.42889927219073
+
+29. TRUNCATE(): This doesn’t work for SQL Server. It returns 7.53635 truncated to n places right of the decimal point.
+
+Syntax: SELECT TRUNCATE(7.53635, 2);
+
+Output: 7.53
+
+𝐒𝐐𝐋 | 𝐃𝐚𝐭𝐞 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬 📚📜🖋
+===============
+In SQL, dates are complicated for newbies, since while working with a database, the format of the data in the table must be matched with the input data to insert. In various scenarios instead of date, datetime (time is also involved with date) is used.
+
+Now, come to some popular functions in SQL date functions.
+
+𝐍𝐎𝐖()
+--------
+Returns the current date and time.
+
+Query:
+SELECT NOW();
+
+Output:
+2024-03-13 19:42:36
+
+𝐂𝐔𝐑𝐃𝐀𝐓𝐄()
+-------------
+Returns the current date. 
+Query:
+SELECT CURDATE();
+Output: 
+2024-03-13
+
+𝐂𝐔𝐑𝐓𝐈𝐌𝐄()
+-------------
+Returns the current time. 
+Query:
+SELECT CURTIME();
+Output: 
+19:45:31
+
+𝐃𝐀𝐓𝐄()
+--------
+Extracts the date part of a date or date/time expression. Example: For the below table named ‘Test’
+
+Id Name BirthTime
+4120 Pratik 1996-09-26 16:44:15.581
+
+Query:
+SELECT Name, DATE(BirthTime) 
+AS BirthDate FROM Test;
+
+Output:
+Name BirthDate
+Pratik 1996-09-26
+
+𝐄𝐗𝐓𝐑𝐀𝐂𝐓()
+-------------
+Returns a single part of a date/time. 
+
+Syntax
+EXTRACT(unit FROM date);
+
+Several units can be considered but only some are used such as MICROSECOND, SECOND, MINUTE, HOUR, DAY, WEEK, MONTH, QUARTER, YEAR, etc. And ‘date’ is a valid date expression. 
+
+Example: For the below table named ‘Test’
+
+Id Name BirthTime
+4120 Pratik 1996-09-26 16:44:15.581
+
+Query:
+SELECT Name, Extract(DAY FROM 
+BirthTime) AS BirthDay FROM Test;
+
+Output: 
+Name Birthday
+Pratik 26
+
+Query:
+SELECT Name, Extract(YEAR FROM BirthTime)
+AS BirthYear FROM Test;
+
+Output: 
+NameBirthYearPratik1996
+
+Query:
+SELECT Name, Extract(SECOND FROM 
+BirthTime) AS BirthSecond FROM Test;
+
+Output:
+Name BirthSecond
+Pratik 581
+
+𝐒𝐐𝐋 | 𝐃𝐚𝐭𝐞 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬 - 𝐏𝐚𝐫𝐭 𝟐 📚📜🖋
+====================
+Let's have a look at some more date functions.
+
+𝐃𝐀𝐓𝐄_𝐀𝐃𝐃()
+
+Adds a specified time interval to a date.
+
+Syntax:
+DATE_ADD(date, INTERVAL expr type);
+
+Where, date – valid date expression, and expr is the number of intervals we want to add. and type can be one of the following: MICROSECOND, SECOND, MINUTE, HOUR, DAY, WEEK, MONTH, QUARTER, YEAR, etc. 
+
+Example: For the below table named ‘Test’
+
+Id Name BirthTime
+4120 Pratik 1996-09-26 16:44:15.581
+
+Query:
+SELECT Name, DATE_ADD(BirthTime, INTERVAL 
+1 YEAR) AS BirthTimeModified FROM Test;
+
+Output:
+Name BirthTimeModified
+Pratik 1997-09-26 16:44:15.581
+
+Query:
+SELECT Name, DATE_ADD(BirthTime, 
+INTERVAL 30 DAY) AS BirthDayModified FROM Test;
+
+Output:
+NameBirthDayModifiedPratik1996-10-26 16:44:15.581
+
+Query:
+SELECT Name, DATE_ADD(BirthTime, INTERVAL
+ 4 HOUR) AS BirthHourModified FROM Test;
+
+Output: 
+Name BirthSecond
+Pratik 1996-10-26 20:44:15.581
+
+𝐃𝐀𝐓𝐄_𝐒𝐔𝐁()
+Subtracts a specified time interval from a date. The syntax for DATE_SUB is the same as DATE_ADD just the difference is that DATE_SUB is used to subtract a given interval of date.
+
+
+𝐃𝐀𝐓𝐄𝐃𝐈𝐅𝐅()
+Returns the number of days between two dates. 
+
+Syntax:
+DATEDIFF(date1, date2);
+
+date1 & date2- date/time expression
+
+Query:
+SELECT DATEDIFF('2017-01-13','2017-01-03') AS DateDiff;
+
+Output: 
+DateDiff
+10
+
+𝐃𝐀𝐓𝐄_𝐅𝐎𝐑𝐌𝐀𝐓()
+Displays date/time data in different formats.
+
+Syntax:
+DATE_FORMAT(date,format);
+
+the date is a valid date and the format specifies the output format for the date/time. The formats that can be used are:
+
+• %a-Abbreviated weekday name (Sun-Sat)
+• %b-Abbreviated month name (Jan-Dec)
+• %c-Month, numeric (0-12)
+• %D-Day of month with English suffix (0th, 1st, 2nd, 3rd)
+• %d-Day of the month, numeric (00-31)
+• %e-Day of the month, numeric (0-31)
+• %f-Microseconds (000000-999999)
+• %H-Hour (00-23)
+• %h-Hour (01-12)
+• %I-Hour (01-12)
+• %i-Minutes, numeric (00-59)
+• %j-Day of the year (001-366)
+• %k-Hour (0-23)
+• %l-Hour (1-12)
+• %M-Month name (January-December)
+• %m-Month, numeric (00-12)
+• %p-AM or PM
+• %r-Time, 12-hour (hh:mm: ss followed by AM or PM)
+• %S-Seconds (00-59)
+• %s-Seconds (00-59)
+• %T-Time, 24-hour (hh:mm: ss)
+• %U-Week (00-53) where Sunday is the first day of the week
+• %u-Week (00-53) where Monday is the first day of the week
+• %V-Week (01-53) where Sunday is the first day of the week, used with %X
+• %v-Week (01-53) where Monday is the first day of the week, used with %x
+• %W-Weekday name (Sunday-Saturday)
+• %w-Day of the week (0=Sunday, 6=Saturday)
+• %X-Year for the week where Sunday is the first day of the week, four digits, used with %V
+• %x-Year for the week where Monday is the first day of the week, four digits, used with %v
+• %Y-Year, numeric, four digits
+• %y-Year, numeric, two digits
+
+𝐂𝐨𝐧𝐯𝐞𝐫𝐬𝐢𝐨𝐧 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧 𝐢𝐧 𝐒𝐐𝐋 📚📄🖋
+====================
+When you define expressions and local variables then you should specify what type of data will be stored in those objects such as text data, money, dates, numbers, or characters.
+
+• Strings Data types such as CHAR and VARCHAR.
+• Decimal values such as FLOAT and REAL.
+• Binary String such as BINARY.
+• Date and Time Data Types such as DATE, TIME, TIMESTAMP, and DATETIME.
+• Numeric Data types such as INT, DOUBLE, and BIGINT.
+• MS Access Data Types such as TEXT, LONG, and BYTE.
+
+On the basis of this, there are two types of conversion in the Data first implicit types conversion and the second is explicit data type conversion.
+
+In implicit type conversion Server can automatically convert the data type from one type to another (i.e., VARCHAR TO CHAR and INT TO FLOAT) but in explicit data type conversion it can be done by the user side.
+
+𝐈𝐦𝐩𝐥𝐢𝐜𝐢𝐭 𝐃𝐚𝐭𝐚-𝐓𝐲𝐩𝐞 𝐂𝐨𝐧𝐯𝐞𝐫𝐬𝐢𝐨𝐧
+In this type of conversion, the data is converted from one type to another implicitly (by itself/automatically).
+
+From --->>> To
+VARCHAR2 or CHAR---->>> NUMBER
+VARCHAR2 or CHAR--->>> DATE
+DATE--->>> VARCHAR2
+NUMBER--->>> VARCHAR2
+
+Query
+
+create table employees(
+employee_id INT PRIMARY KEY ,
+first_name VARCHAR(50) ,
+salary INT);
+INSERT INTO employees(employee_id,first_name,salary)
+VALUES
+(100,'Steven',24000),
+(101,'Neena',17000),
+(102,'Lex',17000),
+(103,'John',11000),
+(104,'Robert',12000),
+(105,'Leo',10000);
+
+1. Query
+
+Here, we want to retrieve the employee_id, first_name, and salary from the employees table whose salary is greater than 15000 then the query is
+
+SELECT employee_id,first_name,salary
+FROM employees
+WHERE salary > 15000;
+
+2. Query
+
+SELECT employee_id,first_name,salary
+FROM employees
+WHERE salary > '15000';
+
+Here we will see the output of both queries will come out to be the same, in spite of the 2nd query using ‘15000’ as text, it is automatically converted into an int data type.
+
+𝐄𝐱𝐩𝐥𝐢𝐜𝐢𝐭 𝐃𝐚𝐭𝐚-𝐓𝐲𝐩𝐞 𝐂𝐨𝐧𝐯𝐞𝐫𝐬𝐢𝐨𝐧
+In this type of conversion, the data is converted from one type to another explicitly (by the user). simply we can say, users define the type to which the expression is to be converted.
+
+TO_CHAR Function
+---
+TO_CHAR function is used to typecast a numeric or date input to a character type with a format model (optional).
+
+Syntax
+TO_CHAR(number1, [format], [nls_parameter])
+
+Using the TO_CHAR Function with Dates
+---
+Syntax
+TO_CHAR(date, ’format_model’)
+
+Example :
+SELECT employee_id, TO_CHAR(hire_date, ’MM/YY’) Month_Hired
+FROM employees
+WHERE last_name = ’Higgins’;
+
+𝐒𝐐𝐋 𝐈𝐍𝐒𝐄𝐑𝐓 𝐈𝐍𝐓𝐎 𝐒𝐭𝐚𝐭𝐞𝐦𝐞𝐧𝐭 📚📜🖋 
+====================
+SQL INSERT Query
+
+𝟏. 𝐎𝐧𝐥𝐲 𝐕𝐚𝐥𝐮𝐞𝐬
+-------
+The first method is to specify only the value of data to be inserted without the column names.
+
+INSERT INTO Syntax:
+INSERT INTO table_name VALUES (value1, value2, value3); 
+table_name: name of the table. value1, value2 
+
+value of first column, second column,… for the new record
+
+Column Names And Values Both
+
+ In the second method we will specify both the columns which we want to fill and their corresponding values as shown below:
+
+Insert Data in Specified Columns – Syntax:
+
+INSERT INTO table_name (column1, column2, column3) 
+VALUES ( value1, value2, value3); 
+
+table_name: name of the table. 
+column1: name of first column, second column .
+value1, value2, value3 value of first column, second column,… for the new record.
+
+Suppose there is a Student database and we want to add values. 
+
+𝐌𝐞𝐭𝐡𝐨𝐝 𝟏 (𝐈𝐧𝐬𝐞𝐫𝐭𝐢𝐧𝐠 𝐨𝐧𝐥𝐲 𝐯𝐚𝐥𝐮𝐞𝐬) – 𝐒𝐐𝐋 𝐈𝐍𝐒𝐄𝐑𝐓 𝐐𝐮𝐞𝐫𝐲
+If we want to insert only values then we use the following query:
+Query:
+
+INSERT INTO Student VALUES 
+('5','HARSH','WEST BENGAL',
+'XXXXXXXXXX','19');
+
+𝐌𝐞𝐭𝐡𝐨𝐝 𝟐 (𝐈𝐧𝐬𝐞𝐫𝐭𝐢𝐧𝐠 𝐯𝐚𝐥𝐮𝐞𝐬 𝐢𝐧 𝐨𝐧𝐥𝐲 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐞𝐝 𝐜𝐨𝐥𝐮𝐦𝐧𝐬) – 𝐒𝐐𝐋 𝐈𝐍𝐒𝐄𝐑𝐓 𝐈𝐍𝐓𝐎 𝐒𝐭𝐚𝐭𝐞𝐦𝐞𝐧𝐭
+If we want to insert values in the specified columns then we use the following query:
+Query:
+INSERT INTO Student (ROLL_NO, 
+NAME, Age) VALUES ('5','PRATIK','19');
+
+Notice that the columns for which the values are not provided are filled by null.
+
+𝟐. 𝐔𝐬𝐢𝐧𝐠 𝐒𝐄𝐋𝐄𝐂𝐓 𝐢𝐧 𝐈𝐍𝐒𝐄𝐑𝐓 𝐈𝐍𝐓𝐎 𝐒𝐭𝐚𝐭𝐞𝐦𝐞𝐧𝐭
+---------------------
+We can use the SELECT statement with INSERT INTO statement to copy rows from one table and insert them into another table. The use of this statement is similar to that of the INSERT INTO statement. The difference is that the SELECT statement is used here to select data from a different table. The different ways of using INSERT INTO SELECT statement are shown below:
+
+𝐈𝐧𝐬𝐞𝐫𝐭𝐢𝐧𝐠 𝐚𝐥𝐥 𝐜𝐨𝐥𝐮𝐦𝐧𝐬 𝐨𝐟 𝐚 𝐭𝐚𝐛𝐥𝐞 – 𝐈𝐍𝐒𝐄𝐑𝐓 𝐈𝐍𝐓𝐎 𝐒𝐄𝐋𝐄𝐂𝐓 𝐒𝐭𝐚𝐭𝐞𝐦𝐞𝐧𝐭
+We can copy all the data of a table and insert it into a different table.
+
+Syntax:
+INSERT INTO first_table SELECT * FROM second_table;
+
+ first_table: name of first table. 
+second_table: name of second table.
+
+We have used the SELECT statement to copy the data from one table and the INSERT INTO statement to insert from a different table.
+
+𝐈𝐧𝐬𝐞𝐫𝐭𝐢𝐧𝐠 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐜 𝐜𝐨𝐥𝐮𝐦𝐧𝐬 𝐨𝐟 𝐚 𝐭𝐚𝐛𝐥𝐞 – 𝐈𝐍𝐒𝐄𝐑𝐓 𝐈𝐍𝐓𝐎 𝐒𝐄𝐋𝐄𝐂𝐓 𝐒𝐭𝐚𝐭𝐞𝐦𝐞𝐧𝐭
+We can copy only those columns of a table that we want to insert into a different table.
+
+Syntax:
+INSERT INTO first_table(names_of_columns1) 
+SELECT names_of_columns2 FROM second_table; 
+
+𝐒𝐐𝐋 | 𝐂𝐚𝐬𝐞 𝐒𝐭𝐚𝐭𝐞𝐦𝐞𝐧𝐭 🔧📚📜🖋
+===============
+There can be two valid ways of going about the case-switch statements.
+The first takes a variable called case_value and matches it with some statement_list.
+
+Syntax: 
+CASE case_value
+WHEN when_value THEN statement_list
+[WHEN when_value THEN statement_list] …
+[ELSE statement_list]
+END CASE
+The second considers a search_condition instead of variable equality and executes the statement_list accordingly.
+
+Syntax:
+CASE
+WHEN search_condition THEN statement_list
+[WHEN search_condition THEN statement_list] …
+[ELSE statement_list]
+END CASE
+
+Example:
+Below is a selection from the “Customer” table in the sample database:
+
+CREATE TABLE Customer(
+ CustomerID INT PRIMARY KEY,
+ CustomerName VARCHAR(50),
+ LastName VARCHAR(50),
+ Country VARCHAR(50),
+ Age int(2),
+ Phone int(10)
+);
+
+-- Insert some sample data into the Customers table
+INSERT INTO Customer (CustomerID, CustomerName, LastName, Country, Age, Phone)
+VALUES (1, 'Shubham', 'Thakur', 'India','23','xxxxxxxxxx'),
+ (2, 'Aman ', 'Chopra', 'Australia','21','xxxxxxxxxx'),
+ (3, 'Naveen', 'Tulasi', 'Sri lanka','24','xxxxxxxxxx'),
+ (4, 'Aditya', 'Arpan', 'Austria','21','xxxxxxxxxx'),
+ (5, 'Nishant. Salchichas S.A.', 'Jain', 'Spain','22','xxxxxxxxxx');
+
+𝐀𝐝𝐝𝐢𝐧𝐠 𝐌𝐮𝐥𝐭𝐢𝐩𝐥𝐞 𝐂𝐨𝐧𝐝𝐢𝐭𝐢𝐨𝐧𝐬 𝐭𝐨 𝐚 𝐂𝐀𝐒𝐄 𝐬𝐭𝐚𝐭𝐞𝐦𝐞𝐧𝐭
+Query
+
+By adding multiple conditions in SQL
+
+SELECT CustomerName, Age,
+CASE
+ WHEN Age> 22 THEN 'The Age is greater than 22'
+ WHEN Age = 21 THEN 'The Age is 21'
+ ELSE 'The Age is over 30'
+END AS QuantityText
+FROM Customer;
+
+𝐂𝐀𝐒𝐄 𝐒𝐭𝐚𝐭𝐞𝐦𝐞𝐧𝐭 𝐖𝐢𝐭𝐡 𝐎𝐑𝐃𝐄𝐑 𝐁𝐘 𝐂𝐥𝐚𝐮𝐬𝐞
+Let’s take the Customer Table which contains CustomerID, CustomerName, LastName, Country, Age, and Phone. We can check the data of the Customer table by using the following query in SQL:
+Query
+By using Order by Clause in SQL
+SELECT CustomerName, Country
+FROM Customer
+ORDER BY
+(CASE
+ WHEN Country IS 'India' THEN Country
+ ELSE Age
+END);
+
+𝐒𝐨𝐦𝐞 𝐢𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭 𝐩𝐨𝐢𝐧𝐭𝐬 𝐚𝐛𝐨𝐮𝐭 𝐂𝐀𝐒𝐄 𝐬𝐭𝐚𝐭𝐞𝐦𝐞𝐧𝐭𝐬
+• There should always be a SELECT in the case statement.
+• END ELSE is an optional component but WHEN THEN these cases must be included in the CASE statement.
+• We can make any conditional statement using any conditional operator (like WHERE ) between WHEN and THEN. This includes stringing together multiple conditional statements using AND and OR.
+• We can include multiple WHEN statements and an ELSE statement to counter with unaddressed conditions.
+
+#Day11
+Poll of the day !! 🙇 
+
+1 - 21
+
+Which SQL function is used to calculate the total number of rows in a table?
+
+
+COUNT(*)
+
+SUM(*)
+
+
+Which SQL function is used to get the average value of a numeric column?
+
+AVG(column_name)
+MAX(column_name)
+
+
+Which SQL function is used to find the highest value in a column?
+MAX(column_name)
+SUM(column_name)
+
+
+Which SQL function would you use to convert a string to uppercase?
+UPPER(string)
+CAPITALIZE(string)
+
+
+Which SQL command is used to remove a table from a database?
+
+DROP TABLE table_name;
+ERASE TABLE table_name;
+
+#Day21
+Poll of the day !! 🙇 
+
+#bigdata #bigdataengineer #dataengineer #hadoop #hive #spark #scala #pythonprogramming #apachehive #optimization #sparksql #sparksfoundation #apachespark #onestepanalytics #pyspark #distributedcomputing #learningandgrowing #problemsolving #awscloud #aws #sql #python #DataProcessing #Analytics #DataManagement #TransactionalProcessing #AnalyticalProcessing #BusinessIntelligence #DataDrivenDecisions
+
+#bigdata #bigdataengineer #dataengineer #hadoop #hive #spark #scala #pythonprogramming #apachehive #optimization #sparksql #sparksfoundation #apachespark #onestepanalytics #pyspark #distributedcomputing #learningandgrowing #problemsolving #awscloud #aws #sql #python #DataProcessing #Analytics #DataManagement #TransactionalProcessing #AnalyticalProcessing #BusinessIntelligence #DataDrivenDecisions
+
+From <https://www.linkedin.com/in/vaishali-sahu1/overlay/create-post/> 
+
+Which SQL keyword is used to sort the result-set?
+
+ORDER BY
+SORT
+
+
+Which SQL keyword is used to retrieve a unique set of values?
+
+
+DISTINCT
+SET
+
+🛠️ Top 5 Best Practices for Optimizing Spark Jobs 🔥
+
+Optimizing Spark jobs is essential for handling big data efficiently. Here are 5 best practices:
+
+	1. Partitioning Strategy: Use an optimal partitioning strategy for large datasets. Partitioning by key allows data to be processed in parallel efficiently, reducing shuffle operations.
+	
+	2. Caching & Persistence: Use caching or persistence when you need to reuse data across multiple stages. Persist data in memory when frequently accessed to avoid redundant calculations.
+	
+	3. Avoid Shuffles: Shuffling data can slow down your job drastically. Minimize shuffling by reducing the number of operations that require data movement across nodes.
+	
+	4. Broadcast Variables: When joining small datasets with large datasets, use broadcast variables to minimize data transfer overhead.
+	
+	5. Tuning Spark Configurations: Adjust configurations like spark.executor.memory, spark.sql.shuffle.partitions, and spark.driver.memory based on the job’s resource requirements.
+
+30. Which operator is used to compare a value to a range of values in SQL?
+
+a) IN
+b) BETWEEN 
+
+#33
+Poll of the day !! 🙇 
+
+From <https://www.linkedin.com/feed/update/urn:li:activity:7284154662809690112/> 
+
+ 25. Which of the following is used to create a new table in SQL?
+
+a) 
+b) MAKE TABLE
+c) CREATE TABLE
+> 
+
+• 💡 Handling Data Skew in Spark: Best Practices 🏋️‍♂️
+Data skew can severely affect Spark job performance. Here’s how to deal with it:
+
+Salting Keys: Introduce randomness into the join key to balance the load across partitions. This technique helps avoid situations where one partition has a disproportionate amount of data.
+
+Skewed Join Strategy: Use a custom join strategy (e.g., broadcasting small tables in a skewed join) or skewed hints to optimize joins where one side has significantly more data.
+
+Repartitioning: If data is highly skewed, repartitioning the data before performing aggregations or joins can improve parallel processing.
+
+Using Adaptive Query Execution (AQE): AQE dynamically adjusts query plans based on the runtime statistics, which helps in better handling skewed data during execution.
+
+From <https://www.linkedin.com/in/vaishali-sahu1/> 
+
+
+3. What is the default file format when reading data in PySpark?
+a) JSON
+b) CSV
+c) Parquet
+d) Text
+Answer: c) Parquet
+
+
+
+7. Which method is used to stop a PySpark session?
+a) spark.end()
+b) spark.close()
+c) spark.stop()
+d) stopSession()
+Answer: c) spark.stop()
+
+
+9. Which method is used to filter rows in a PySpark DataFrame?
+a) df.filter()
+b) df.select()
+c) df.groupBy()
+d) df.sort()
+Answer: a) df.filter()
+
+
+0. Which method is used to select specific columns in a DataFrame?
+a) df.filter()
+b) df.select()
+c) df.groupBy()
+d) df.update()
+Answer: b) df.select()
+
+
+1. Which of the following AWS services is used for object storage?
+a) EC2
+b) S3
+c) RDS
+d) Lambda
+Answer: b) S3
+
+
+3. Which AWS service is a fully managed NoSQL database?
+a) RDS
+b) S3
+c) DynamoDB
+d) Redshift
+Answer: c) DynamoDB
+
+
+4. Which AWS service is used for data warehousing?
+a) S3
+b) Redshift
+c) EC2
+d) CloudWatch
+Answer: b) Redshift
+
+
+Here are some very easy AWS-related multiple-choice questions (MCQs) designed for Data Engineers, suitable for beginners. These questions cover fundamental AWS concepts, especially relevant to those working in cloud data engineering.
+
+1. Which of the following AWS services is used for object storage?
+a) EC2
+b) S3
+c) RDS
+d) Lambda
+Answer: b) S3
+
+2. Which AWS service is used to run virtual machines in the cloud?
+a) S3
+b) EC2
+c) DynamoDB
+d) Lambda
+Answer: b) EC2
+
+3. Which AWS service is a fully managed NoSQL database?
+a) RDS
+b) S3
+c) DynamoDB
+d) Redshift
+Answer: c) DynamoDB
+
+4. Which AWS service is used for data warehousing?
+a) S3
+b) Redshift
+c) EC2
+d) CloudWatch
+Answer: b) Redshift
+
+5. Which service is used to manage and monitor AWS cloud resources?
+a) EC2
+b) CloudWatch
+c) Lambda
+d) RDS
+Answer: b) CloudWatch
+
+6. Which of the following is used for serverless computing in AWS?
+a) EC2
+b) Lambda
+c) RDS
+d) S3
+Answer: b) Lambda
+
+#bigdata #bigdataengineer #dataengineer #hadoop #hive #spark #scala #pythonprogramming #apachehive #optimization #sparksql #sparksfoundation #apachespark #onestepanalytics #pyspark #distributedcomputing #learningandgrowing #problemsolving
+#awscloud #aws #sql #python #DataProcessing #Analytics #DataManagement
+
+#DAY41
+Poll of the day !! 🙇
+
+47 - mon -27
+
+#DAY41
+𝐏𝐨𝐥𝐥 𝐨𝐟 𝐭𝐡𝐞 𝐝𝐚𝐲 !! 🙇
+.
+.
+.
+.
+.
+.
+.
+.
+.
+#bigdata #bigdataengineer #dataengineer #hadoop #hive #spark #scala #pythonprogramming #apachehive #optimization #sparksql #sparksfoundation #apachespark #onestepanalytics #pyspark #distributedcomputing #learningandgrowing #problemsolving
+#awscloud #aws #sql #python #DataProcessing #Analytics #DataManagement
+
+
+58-FR
