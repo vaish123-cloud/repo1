@@ -1,0 +1,84 @@
+Crud Operations:
+
+	1. Create:
+	Create a database or table.
+	2. Read:
+	3. Update:
+	4. Delete:
+	
+	
+	4.Delete: (dml) - data manipulation language
+	
+	This delete the table data row by row , doenot deletes the columnname, it takes time to delete:
+	
+	Cmd: delete from tablename;
+	
+	Delete from entry1 where id = "3"; 
+	
+	Truncate:  (ddl) - data definition language
+	
+	This also deletes the table .
+	First deletes the table
+	Than create the column name again 
+	This fastly deletes than using delete cmd
+	This cannoy delete the specific columns in a table either it deletes all the data in the table
+	
+	Cmd: truncate table tablename;
+	
+	
+	3.Update:
+	
+	Cmd: update tablename set age = "50" where id = "2";
+	
+	###how to add a new column###:
+	
+	Alter:
+	
+	Alter table tablename add column columnname ;
+
+alter table dec10 add column city varchar(20);
+
+
+ alter table dec10 modify column city int;
+ 
+ desc dec10;
+
+
+alter table dec10 rename column city to state;
+
+alter table dec10 drop  column state;
+
+
+alter table dec10 rename to employees;
+
+show tables;
+
+Window function:
+
+SELECT 
+    id, 
+    name, 
+    ROW_NUMBER() OVER (ORDER BY salary DESC) AS rank
+FROM 
+    employees;
+
+*************
+
+
+SELECT 
+    department_id, 
+    employee_id, 
+    salary,
+    SUM(salary) OVER (PARTITION BY department_id ORDER BY salary DESC) AS cumulative_salary
+FROM 
+    employees;
+
+
+
+
+<window_function> (<expression>) 
+    OVER (
+        [PARTITION BY <expression>]
+        [ORDER BY <expression>]
+        [ROWS/RANGE <frame_specification>]
+    )
