@@ -315,29 +315,29 @@ object first {
 
   //binary search
 
-  var l = Array(10, 20, 30, 40, 50)
-  var left = 0
-  var right = l.length - 1
-  var target = 40
-  var indexfound = -1
-  while (left <= right) {
-    var mid = left + (right - left) / 2
-    if (l(mid) == target) {
-      indexfound = mid
-      scala.util.control.Break
-    }
-    else if (l(mid) < target) {
-      left = mid + 1
-    }
-    else {
-      right = mid - 1
-    }
-  }
-  if (indexfound != -1) {
-    println(s"Target found at index: $indexfound")
-  } else {
-    println("Target not found")
-  }
+//  var l = Array(10, 20, 30, 40, 50)
+//  var left = 0
+//  var right = l.length - 1
+//  var target = 40
+//  var indexfound = -1
+//  while (left <= right) {
+//    var mid = left + (right - left) / 2
+//    if (l(mid) == target) {
+//      indexfound = mid
+//      scala.util.control.Break
+//    }
+//    else if (l(mid) < target) {
+//      left = mid + 1
+//    }
+//    else {
+//      right = mid - 1
+//    }
+//  }
+//  if (indexfound != -1) {
+//    println(s"Target found at index: $indexfound")
+//  } else {
+//    println("Target not found")
+//  }
 
 
 }

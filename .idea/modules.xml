@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/scaladay1.iml" filepath="$PROJECT_DIR$/.idea/modules/scaladay1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scaladay1-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scaladay1-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/scaladay1.scaladay1-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scaladay1.scaladay1-build.iml" />
     </modules>
   </component>

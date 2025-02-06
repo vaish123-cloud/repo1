@@ -1,20 +1,20 @@
-[info] Updating {file:/C:/Users/jayes/IdeaProjects/scaladay1/project/}scaladay1-build...
-[debug] :: resolving dependencies :: default#scaladay1-build;0.1-SNAPSHOT
+[info] Updating {file:/C:/Users/HP/IdeaProjects/repo1/project/}repo1-build...
+[debug] :: resolving dependencies :: default#repo1-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'compile'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [compile]
 [debug] resolving dependencies for configuration 'runtime'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [compile]
 [debug] resolving dependencies for configuration 'test'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [test]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [test]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [compile]
 [debug] resolving dependencies for configuration 'provided'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->default(compile)]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.7 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [info] Resolving org.scala-lang#scala-library;2.10.7 ...
@@ -22,10 +22,10 @@
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.7
 [debug] 	found org.scala-lang#scala-library;2.10.7 in sbt-chain
 [debug] 	[2.10.7] org.scala-lang#scala-library;2.10.7
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->runtime]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->compile]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->master]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.18 [provided->default(compile)]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->runtime]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->compile]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->master]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.18 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.7 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [info] Resolving org.scala-sbt#sbt;0.13.18 ...
@@ -1815,13 +1815,13 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {provided=[default(compile)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]}
 [debug] resolving dependencies for configuration 'optional'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [optional]
 [debug] resolving dependencies for configuration 'compile-internal'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [compile-internal]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [optional]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->default(compile)]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [compile-internal]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.7 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
@@ -1830,10 +1830,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.7 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.7 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)], provided=[default(compile)]}
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->runtime]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->compile]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->master]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.18 [provided->default(compile)]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->runtime]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->compile]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->master]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.18 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.7 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
@@ -3706,18 +3706,18 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {provided=[default(compile)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]}
 [debug] resolving dependencies for configuration 'runtime-internal'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [runtime-internal]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [runtime-internal]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [optional]
 [debug] resolving dependencies for configuration 'test-internal'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [test-internal]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [test]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [optional]
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->default(compile)]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [test-internal]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [test]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.7 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
@@ -3730,10 +3730,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.7 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.7 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)], provided=[default(compile)]}
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->runtime]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->compile]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->master]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.18 [provided->default(compile)]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->runtime]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->compile]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [provided->master]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.18 [provided->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.7 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)], provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
@@ -5806,20 +5806,20 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {provided=[default(compile)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[default(compile)]}
 [debug] resolving dependencies for configuration 'plugin'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [plugin]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [plugin]
 [debug] resolving dependencies for configuration 'sources'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [sources]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [sources]
 [debug] resolving dependencies for configuration 'docs'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [docs]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [docs]
 [debug] resolving dependencies for configuration 'pom'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [pom]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [pom]
 [debug] resolving dependencies for configuration 'scala-tool'
-[debug] == resolving dependencies for default#scaladay1-build;0.1-SNAPSHOT [scala-tool]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.7 [scala-tool->default]
+[debug] == resolving dependencies for default#repo1-build;0.1-SNAPSHOT [scala-tool]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.7 [scala-tool->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.7 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.10.7 {provided=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.10.7 {scala-tool=[default, optional(default)], provided=[default(compile)]}
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.7 [scala-tool->runtime]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.7 [scala-tool->compile]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.7 [scala-tool->runtime]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.7 [scala-tool->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#jline;2.10.7 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#jline;2.10.7 {optional=[compile(*), master(*)]}
@@ -5885,14 +5885,14 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.7->org.scala-lang#scala-library;2.10.7 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.7->org.scala-lang#scala-library;2.10.7 [runtime->compile]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.7 [scala-tool->master]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.7 [scala-tool->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#jline;2.10.7 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#jline;2.10.7 {optional=[compile(*), master(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#jline;2.10.7 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#jline;2.10.7 {optional=[compile(*), master(*)]}
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.7 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.7 [scala-tool->optional(default)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.10.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#jline;2.10.7 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#jline;2.10.7 {optional=[compile(*), master(*)]}
@@ -5948,11 +5948,11 @@
 [debug] sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 [debug] 	found org.fusesource.jansi#jansi;1.4 in sbt-chain
 [debug] == resolving dependencies org.scala-lang#jline;2.10.7->org.fusesource.jansi#jansi;1.4 [compile->compile(*)]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [scala-tool->default]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [scala-tool->runtime]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [scala-tool->compile]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [scala-tool->master]
-[debug] == resolving dependencies default#scaladay1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [scala-tool->default]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [scala-tool->runtime]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [scala-tool->compile]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [scala-tool->master]
+[debug] == resolving dependencies default#repo1-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.7 [scala-tool->optional(default)]
 [debug] ignoring unhandled DependencyDescriptorMediator: class sbt.IvyScala$OverrideScalaMediator
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
@@ -6009,68 +6009,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.7!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 2053ms :: artifacts dl 46ms
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT compile produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-compile.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT runtime produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-runtime.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT test produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-test.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT provided produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-provided.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT optional produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-optional.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT compile-internal produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-compile-internal.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-runtime-internal.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT test-internal produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-test-internal.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT plugin produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-plugin.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT sources produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-sources.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT docs produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-docs.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT pom produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-pom.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT scala-tool produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-scala-tool.xml
-[debug] 	resolve done (2053ms resolve - 46ms download)
-[info] Done updating.
-org.scala-sbt#classfile;0.13.18!classfile.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#incremental-compiler;0.13.18!incremental-compiler.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#compile;0.13.18!compile.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#persist;0.13.18!persist.jar
-[debug] 	[NOT REQUIRED] org.scala-tools.sbinary#sbinary_2.10;0.4.2!sbinary_2.10.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#cross;0.13.18!cross.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt.ivy#ivy;2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310!ivy.jar
-[debug] 	[NOT REQUIRED] com.jcraft#jsch;0.1.50!jsch.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#serialization_2.10;0.1.2!serialization_2.10.jar
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-pickling_2.10;0.10.1!scala-pickling_2.10.jar
-[debug] 	[NOT REQUIRED] org.json4s#json4s-core_2.10;3.2.10!json4s-core_2.10.jar
-[debug] 	[NOT REQUIRED] org.spire-math#jawn-parser_2.10;0.6.0!jawn-parser_2.10.jar
-[debug] 	[NOT REQUIRED] org.spire-math#json4s-support_2.10;0.6.0!json4s-support_2.10.jar
-[debug] 	[NOT REQUIRED] org.scalamacros#quasiquotes_2.10;2.0.1!quasiquotes_2.10.jar
-[debug] 	[NOT REQUIRED] org.json4s#json4s-ast_2.10;3.2.10!json4s-ast_2.10.jar
-[debug] 	[NOT REQUIRED] com.thoughtworks.paranamer#paranamer;2.6!paranamer.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#cache;0.13.18!cache.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.18!test-agent.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.18!apply-macro.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/jline/2.10.7/jline-2.10.7.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/jline/2.10.7/jline-2.10.7.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/jline/2.10.7/jline-2.10.7.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/jline/2.10.7/jline-2.10.7.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/jline/2.10.7/jline-2.10.7.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#jline;2.10.7!jline.jar (2027ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar
-[info] downloading https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar
-[info] 	[SUCCESSFUL ] org.fusesource.jansi#jansi;1.4!jansi.jar (1292ms)
-[debug] :: resolution report :: resolve 14962ms :: artifacts dl 3373ms
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT compile produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-compile.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT runtime produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-runtime.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT test produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-test.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT provided produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-provided.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT optional produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-optional.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT compile-internal produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-compile-internal.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-runtime-internal.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT test-internal produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-test-internal.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT plugin produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-plugin.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT sources produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-sources.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT docs produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-docs.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT pom produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-pom.xml
-[debug] 	report for default#scaladay1-build;0.1-SNAPSHOT scala-tool produced in C:\Users\jayes\IdeaProjects\scaladay1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-scaladay1-build-scala-tool.xml
-[debug] 	resolve done (14962ms resolve - 3373ms download)
+[debug] :: resolution report :: resolve 4720ms :: artifacts dl 98ms
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT compile produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-compile.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT runtime produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-runtime.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT test produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-test.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT provided produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-provided.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT optional produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-optional.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT compile-internal produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-compile-internal.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-runtime-internal.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT test-internal produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-test-internal.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT plugin produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-plugin.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT sources produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-sources.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT docs produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-docs.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT pom produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-pom.xml
+[debug] 	report for default#repo1-build;0.1-SNAPSHOT scala-tool produced in C:\Users\HP\IdeaProjects\repo1\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-repo1-build-scala-tool.xml
+[debug] 	resolve done (4720ms resolve - 98ms download)
 [info] Done updating.

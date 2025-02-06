@@ -1,0 +1,141 @@
+	1. Create a database:
+	create database oct1;
+	
+	2. Use a database:
+	Use oct1;
+
+    3.    Create a table:
+	create table entry1
+	(
+	id int,
+	name varchar(20),
+	age int
+	);
+	
+     4.  Insert into table:
+          three ways:
+      4.1  insert into entry1 values(1 ,"A",44);
+      4.2  insert into entry1 values(1 ,"A",44),(2,"B",88);
+      4.3  insert into entry1(id,name) values (3 ,"C");
+
+    5.Get table details:
+       select * from entry1;
+
+    6. Conditionally move the data:
+      
+	select id ,name ,age ,
+	case 
+	when age>55 then "pensionable"
+	else "not-pensionable"
+	end as details
+	
+	from 
+	
+	entry1;
+
+
+	
+
+	
+
+Exercise: 
+Problem 1: Salary Hike Based on Experience and Performance
+Scenario: You want to give a salary hike based on both experience and performance rating. If the employee has:
+•	Experience ≥ 8 and Performance 'A', they get a 20% hike.
+•	Experience ≥ 5 and Performance 'B', they get a 15% hike.
+
+•	Performance 'C' gets no hike.
+•	For other cases, they get a 10% hike.
+
+
+Sol:
+
+
+CREATE TABLE Employee (
+    emp_id INT,
+    emp_name VARCHAR(50),
+    department VARCHAR(50),
+    salary INT,
+    experience INT,
+    performance_rating CHAR(1)
+);
+
+INSERT INTO Employee (emp_id, emp_name, department, salary, experience, performance_rating) 
+VALUES 
+(1, 'Alice', 'HR', 55000, 5, 'A'),
+(2, 'Bob', 'Engineering', 95000, 7, 'B'),
+(3, 'Charlie', 'Engineering', 72000, 3, 'C'),
+(4, 'David', 'Marketing', 50000, 6, 'A'),
+(5, 'Eva', 'Finance', 78000, 10, 'B'),
+(6, 'Frank', 'HR', 62000, 8, 'C'),
+(7, 'Grace', 'Finance', 85000, 9, 'A');
+
+
+CASE AND WHEN CHAINING PROBLEMS
+
+
+Sol-1:
+
+select  emp_id, emp_name, department, salary, experience, performance_rating,
+case 
+when experience>= 8 and performance_rating = "A"  then "20"
+When experience>= 5 and performance_rating = "B"  then "15"
+When performance_rating = "C" then "0"
+else "10"
+end as hike
+
+from 
+
+Employee;
+
+****************************************
+
+Sol-2:
+
+select *,
+case 
+when department = "Finance" and performance_rating = "A"  then "20"
+when department = "Finance" and performance_rating = "B"  then "15"
+when department = "Finance" and performance_rating = "C"  then "5"
+when department = "Engineering" and performance_rating = "A"  then "18"
+when department = "Engineering" and performance_rating = "B"  then "12"
+when department = "Engineering" and performance_rating = "C"  then "3"
+else "10"
+end as Bonus
+from 
+Employee;
+
+**********************************
+Sol-3:
+
+select *,
+case 
+when salary>"80000" and performance_rating = "A"  then "High Performer"
+When "50000"<salary and salary<"80000" and performance_rating = "B" then "Mid Performer"
+When salary<"50000" and performance_rating = "C" then " Low Performer"
+
+end as category
+from 
+Employee;
+
+##doubt When "50000"<salary<"80000" and performance_rating = "B" then "Mid Performer"  ##
+
+*************************************
+Sol-4
+
+select *,
+case 
+when department = "HR" and experience<"5"  then "High Risk"
+when department = "HR" and experience>"5"  then "Low Risk"
+when department = "Finance" and experience>"8" then "Low Risk"
+when department = "Finance" and experience<"8" then "Medium Risk"
+else "Medium Risk"
+end as employeerisk
+from 
+Employee;
+
+*****************
+
+Sol-5
+
+
